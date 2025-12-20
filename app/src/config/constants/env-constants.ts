@@ -19,6 +19,7 @@ export const envVars = createEnvVars({
   DOMAIN_API: 'DOMAIN_API',
   TELEGRAM_BOT_KEY: 'TELEGRAM_BOT_KEY',
   TELEGRAM_CHAT_ID: 'TELEGRAM_CHAT_ID',
+  MAILER_SEND_DOMEN: 'MAILER_SEND_DOMEN',
 });
 const NODE_ENV = getEnvVars(envVars.NODE_ENV);
 export const envVarValue = {
@@ -39,4 +40,5 @@ export const envVarValue = {
   [envVars.PHONE_SALT]: getEnvVars(envVars.PHONE_SALT),
   [envVars.TELEGRAM_BOT_KEY]: getEnvVars(envVars.TELEGRAM_BOT_KEY),
   [envVars.TELEGRAM_CHAT_ID]: getEnvVars(envVars.TELEGRAM_CHAT_ID),
+  [envVars.MAILER_SEND_DOMEN]: getEnvVars(envVars.MAILER_SEND_DOMEN),
 };

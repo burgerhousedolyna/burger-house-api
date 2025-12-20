@@ -17,7 +17,7 @@ export class MailerSendService {
     // TODO: chage mail and app
 
     const sendForm = new Sender(
-      'burger-house@test-vz9dlem2yd64kj50.mlsender.net',
+      envVarValue[envVars.MAILER_SEND_DOMEN],
       'Burger House',
     );
 
