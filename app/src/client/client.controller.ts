@@ -48,6 +48,9 @@ export class ClientController {
             phone: {
               type: 'string',
             },
+            deliveryOn: {
+              type: 'boolean',
+            },
             about_description: {
               type: 'string',
               example: 'Дуже смачно!!!',

@@ -80,7 +80,7 @@ export class ClientService {
   async getAbout() {
     const dateNow = new Date();
     const year = dateNow.getFullYear();
-    const month = String(dateNow.getMonth()).padStart(2, '0');
+    const month = String(dateNow.getMonth() + 1).padStart(2, '0');
     const day = String(dateNow.getDate()).padStart(2, '0');
     const formattedDate = `${year}-${month}-${day}`;
 

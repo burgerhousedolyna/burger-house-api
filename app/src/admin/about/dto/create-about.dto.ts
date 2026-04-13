@@ -1,6 +1,13 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { GeneralPropertyDecoratorMaker } from '../../../utils/propertyDecoratorApplier';
-import { IsEmail, IsOptional, IsString, IsUrl, Length } from 'class-validator';
+import {
+  IsBoolean,
+  IsEmail,
+  IsOptional,
+  IsString,
+  IsUrl,
+  Length,
+} from 'class-validator';
 
 const GeneralStringDecorator = GeneralPropertyDecoratorMaker(
   ApiProperty(),
@@ -25,4 +32,8 @@ export class CreateAboutDto {
   placeDescription?: string | null;
   @GeneralStringDecorator()
   placeAddress?: string | null;
+  @ApiProperty({ required: false })
+  @IsOptional()
+  @IsBoolean()
+  deliveryOn?: boolean;
 }

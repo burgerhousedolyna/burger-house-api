@@ -246,7 +246,7 @@ CREATE TABLE IF NOT EXISTS sessions (
   updated_at TIMESTAMP NOT NULL DEFAULT NOW()
  
 );
-CREATE INDEX idx_sessions_sas_srs ON sessions (sas, srs);
+CREATE INDEX IF NOT EXISTS idx_sessions_sas_srs ON sessions (sas, srs);
 
 -- TODO: orders
 

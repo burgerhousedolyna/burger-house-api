@@ -28,4 +28,7 @@ export class About {
     nullable: true,
   })
   placeAddressLink: string | null;
+
+  @Column({ name: 'delivery_on', type: 'boolean', default: false })
+  deliveryOn: boolean;
 }

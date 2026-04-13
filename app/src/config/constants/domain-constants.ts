@@ -32,7 +32,10 @@ export const domains = () => {
       break;
     case 'prewiev':
       domains.ADMIN = [/^.*$/];
-      domains.CLIENT = [getEnvVars(envVars.DOMAIN_CLIENT)];
+      domains.CLIENT = [
+        getEnvVars(envVars.DOMAIN_CLIENT),
+        getEnvVars(envVars.DOMAIN_ADMIN),
+      ];
       domains.API = getEnvVars(envVars.DOMAIN_API);
       break;
 
