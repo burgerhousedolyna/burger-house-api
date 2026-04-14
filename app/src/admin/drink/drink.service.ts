@@ -45,13 +45,13 @@ export class DrinkService {
   }
 
   updatePrice(
-    id: number,
+    id: string,
     { price }: UpdateDrinkPriceDto,
   ): Promise<UpdateResult> {
     return this.drinkRepository.update(id, { price });
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return this.drinkRepository.delete(id);
   }
 }

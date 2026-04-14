@@ -43,14 +43,14 @@ export class DrinkController {
     @Param('id') id: string,
     @Body() updatePrice: UpdateDrinkPriceDto,
   ) {
-    return this.drinkService.updatePrice(+id, updatePrice);
+    return this.drinkService.updatePrice(id, updatePrice);
   }
 
   @RequirePermission(PermissionsEnum.DRINK_DELETE)
   @Delete(':id')
   @HttpCode(HttpStatus.NO_CONTENT)
   async remove(@Param('id') id: string) {
-    await this.drinkService.remove(+id);
+    await this.drinkService.remove(id);
     return;
   }
 }
